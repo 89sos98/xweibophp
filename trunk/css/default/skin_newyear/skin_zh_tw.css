@@ -1,0 +1,13 @@
+@import url( "skin.css" );
+
+/*skin_newyear*/
+.post-box .post-title,
+.post-box .share-btn,
+.post-box .share-btn:hover, 
+.post-box .share-btn-disable { background:url( bgimg/tc_skin_bg.png ) no-repeat; }
+
+.post-box .post-title { background-position:0 0; }
+.post-box .share-btn { background-position:0 -40px;}
+.post-box .share-btn:hover { background-position:-104px -40px;}
+.post-box .share-btn-disable,
+.post-box .share-btn-disable:hover { background-position:-208px -40px; cursor:default;}
