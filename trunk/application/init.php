@@ -1,13 +1,5 @@
 <?php
-/**************************************************
-*  Created:  2010-06-08
-*
-*  框架初始化文件
-*
-*  @Xweibo (C)1996-2099 SINA Inc.
-*  @Author xionghui <xionghui1@staff.sina.com.cn>
-*
-***************************************************/
+///框架初始化文件
 require_once dirname(__FILE__).'/../user_config.php';
 require_once 'cfg.php';
 require_once dirname(__FILE__).'/../config.php';

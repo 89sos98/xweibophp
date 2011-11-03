@@ -1,18 +1,9 @@
 <?php
-/**
- * @file			core.php
- * @CopyRight		(C)1996-2099 SINA Inc.
- * @Project			Xweibo
- * @Author			xionghui <xionghui1@staff.sina.com.cn>
- * @Create Date:	2010-06-08
- * @Modified By:	xionghui/2010-11-19
- * @Brief			框架核心文件
- */
+///框架核心文件
 
 class APP {
 	//------------------------------------------------------------------
 	function APP(){
-
 	}
 	//------------------------------------------------------------------
 	/**
