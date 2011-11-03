@@ -1,14 +1,5 @@
 <?php
-/**
- * @file			index.php
- * @CopyRight		(C)1996-2099 SINA Inc.
- * @Project			Xweibo
- * @Author			heli <heli1@staff.sina.com.cn>
- * @Create Date:	2010-07-08
- * @Modified By:	heli/2010-11-15
- * @Brief			Xweibo安装程序
- */
-
+///Xweibo安装程序
 
 @ini_set('display_errors', 1);
 error_reporting(E_ALL);

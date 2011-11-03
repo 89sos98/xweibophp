@@ -1,13 +1,5 @@
 <?php
-/**
- * @file			config.php
- * @CopyRight		(C)1996-2099 SINA Inc.
- * @Project			Xweibo
- * @Author			xionghui <xionghui1@staff.sina.com.cn>
- * @Create Date:	2010-06-08
- * @Modified By:	xionghui/2010-11-15
- * @Brief			系统配置文件
- */
+///系统配置文件
 //----------------------------------------------------------------------
 /// 产品名称
 define('WB_SOFT_NAME', 'Xweibo');
@@ -19,35 +11,35 @@ define('WB_PROJECT', 'xwb');
 if ( !defined('R_DEF_MOD') ){define('R_DEF_MOD', "index");}
 //----------------------------------------------------------------------
 // 本地安全 solt string
-define('AUTH_KEY',			'XMBLOG654321');
+define('AUTH_KEY','XMBLOG654321');
 /// 站点语言名称（目录）
-define('SITE_LANG',			'zh_cn');
+define('SITE_LANG','zh_cn');
 /// 站点皮肤  CSS 文件目录名称的 前缀
-define('SITE_SKIN_CSS_PRE',	'skin_');
+define('SITE_SKIN_CSS_PRE','skin_');
 /// 站点皮肤 CSS 自定义皮肤目录
-define('SITE_SKIN_CSS_CUSTOM',	'skin_define');
+define('SITE_SKIN_CSS_CUSTOM','skin_define');
 /// 站点皮肤  CSS 文件目录名称的 后缀
 /// 当用户和系统都没有设置,且不能从预览变量路由中取得CSS皮肤值的时候即为当前值
-define('SITE_SKIN_TYPE',	'default');
+define('SITE_SKIN_TYPE','default');
 /// 站点皮肤  模板目录名称（目录）
-define('SITE_SKIN_TPL_DIR',	'1');
+define('SITE_SKIN_TPL_DIR','1');
 /// 预览皮肤时的 变量路由
-define('SITE_SKIN_PREV_V',	'R:prev_skin');
+define('SITE_SKIN_PREV_V','R:prev_skin');
 /// 皮肤配置文件名称
-define('SKIN_CONFIG',		'skinconfig.ini');
+define('SKIN_CONFIG','skinconfig.ini');
 /// 皮肤预览图片名称
-define('SKIN_PRE_PIC',		'thumbpic.png');
+define('SKIN_PRE_PIC','thumbpic.png');
 
 /// 字体目录
-define('WB_FONT_PATH',			P_VAR_DATA . '/fonts');
+define('WB_FONT_PATH',P_VAR_DATA . '/fonts');
 /// 微博列表默认显示条数
-define('WB_API_LIMIT',			20);
+define('WB_API_LIMIT',20);
 /// 默认时区
-define('APP_TIMEZONE_OFFSET',	8);
+define('APP_TIMEZONE_OFFSET',8);
 /// 本地时间，与标准时间的差，单位为秒，当本地时钟较快时为　负数　，较慢时为　正数　, 默认为　０　即本地时间是准确的
-define('LOCAL_TIME_OFFSET',		0);
+define('LOCAL_TIME_OFFSET',0);
 /// 经过较准的，本地时间戳　所有使用APP_LOCAL_TIMESTAMP　的地方用这个常替代，防止，无法更改服务器时间导致的问题
-define('APP_LOCAL_TIMESTAMP',	time() + LOCAL_TIME_OFFSET);
+define('APP_LOCAL_TIMESTAMP',time() + LOCAL_TIME_OFFSET);
 
 /// 本程序中的HTTP  USER_AGENT 代理
 if (XWB_SERVER_ENV_TYPE === 'common') {
@@ -59,61 +51,61 @@ if (XWB_SERVER_ENV_TYPE === 'common') {
 define('CRON_LOCK_FILE_PREFIX', 'cron_lock_');
 //----------------------------------------------------------------------
 /// 站点LOGO文件名
-define('WB_LOGO_DEFAULT_NAME',		'img/logo.png');
-define('WB_LOGO_WAP_DEFAULT_NAME',		'img/logo_wap.png');
-define('WB_LOGO_OUTPUT_DEFAULT_NAME',		'img/logo_output.png');
-define('WB_LOGO_FILE_NAME',			'/data/logo/logo_upload.png');
-define('WB_LOGO_WAP_FILE_NAME',			'/data/logo/logo_upload_wap.png');
-define('WB_LOGO_OUTPUT_FILE_NAME',			'/data/logo/logo_upload_output.png');
-define('WB_LOGO_PREVIEW_FILE_NAME',	'/data/logo/logo_previews.png');
+define('WB_LOGO_DEFAULT_NAME','img/logo.png');
+define('WB_LOGO_WAP_DEFAULT_NAME','img/logo_wap.png');
+define('WB_LOGO_OUTPUT_DEFAULT_NAME','img/logo_output.png');
+define('WB_LOGO_FILE_NAME','/data/logo/logo_upload.png');
+define('WB_LOGO_WAP_FILE_NAME','/data/logo/logo_upload_wap.png');
+define('WB_LOGO_OUTPUT_FILE_NAME','/data/logo/logo_upload_output.png');
+define('WB_LOGO_PREVIEW_FILE_NAME','/data/logo/logo_previews.png');
 /// 站点地址栏文件名
-define('WB_ICON_DEFAULT_NAME',		'img/logo/default_icon.png');
-define('WB_ICON_FILE_NAME',			'/data/logo/icon_upload.png');
-define('WB_ICON_PREVIEW_FILE_NAME',	'/data/logo/icon_previews.png');
+define('WB_ICON_DEFAULT_NAME','img/logo/default_icon.png');
+define('WB_ICON_FILE_NAME','/data/logo/icon_upload.png');
+define('WB_ICON_PREVIEW_FILE_NAME','/data/logo/icon_previews.png');
 /// 网站认证大图标
-define('AUTH_BIG_ICON_DEFAULT_NAME',		'img/logo/default_v1.png');
-define('AUTH_BIG_ICON_FILE_NAME',			'/data/logo/big_auth_icon_upload.png');
-define('AUTH_BIG_ICON_PREVIEW_FILE_NAME',	'/data/logo/big_auth_icon_previews.png');
+define('AUTH_BIG_ICON_DEFAULT_NAME','img/logo/default_v1.png');
+define('AUTH_BIG_ICON_FILE_NAME','/data/logo/big_auth_icon_upload.png');
+define('AUTH_BIG_ICON_PREVIEW_FILE_NAME','/data/logo/big_auth_icon_previews.png');
 /// 网站认证小图标
-define('AUTH_SMALL_ICON_DEFAULT_NAME',		'img/logo/default_v2.png');
-define('AUTH_SMALL_ICON_FILE_NAME',			'/data/logo/small_auth_icon_upload.png');
-define('AUTH_SMALL_ICON_PREVIEW_FILE_NAME',	'/data/logo/small_auth_icon_previews.png');
+define('AUTH_SMALL_ICON_DEFAULT_NAME','img/logo/default_v2.png');
+define('AUTH_SMALL_ICON_FILE_NAME','/data/logo/small_auth_icon_upload.png');
+define('AUTH_SMALL_ICON_PREVIEW_FILE_NAME','/data/logo/small_auth_icon_previews.png');
 
-define('WB_CELEB_PREVIEW_FILE_NAME',	'/data/logo/celeb_previews.png');
-define('WB_CELEB_OUTPUT_FILE_NAME',	'/data/logo/celeb_banner.png');
-define('WB_SKIN_BGIMG_UPLOAD_DIR',	'/data/skinbg/');
+define('WB_CELEB_PREVIEW_FILE_NAME','/data/logo/celeb_previews.png');
+define('WB_CELEB_OUTPUT_FILE_NAME','/data/logo/celeb_banner.png');
+define('WB_SKIN_BGIMG_UPLOAD_DIR','/data/skinbg/');
 /// 名人堂banner图
-define('WB_CELEB_BANNER_FILE_NAME', '/data/logo/celeb_banner.png');
+define('WB_CELEB_BANNER_FILE_NAME','/data/logo/celeb_banner.png');
 //----------------------------------------------------------------------
 /// API 相关
 /// 微博 api url
-define('WEIBO_API_URL', 	'http://api.t.sina.com.cn/');
+define('WEIBO_API_URL','http://api.t.sina.com.cn/');
 /// sinaurl.cn 地址信息查询API地址
-define('SINAURL_INFO', 		'http://weibo.com/mblog/sinaurl_info.php');
+define('SINAURL_INFO','http://weibo.com/mblog/sinaurl_info.php');
 /// 微博表情 url
 define('WB_EMOTICONS_URL',	'http://timg.sjs.sinajs.cn/miniblog2style/images/common/face/basic/');
 /// X微博升级检查URL
 define('WB_UPGRADE_CHK_URL','http://x.weibo.com/service/stdVersion.php?p=std&v=' . WB_VERSION);
 //define('WB_UPGRADE_CHK_URL', '');
 /// SINA 微博的注册地址
-define('SINA_WB_REG_URL',	'http://weibo.com/reg.php?ps=u3&lang=zh');
+define('SINA_WB_REG_URL','http://weibo.com/reg.php?ps=u3&lang=zh');
 /// X微博用户反馈上报地址
-define('WB_FEEDBACK_URL',	'http://x.weibo.com/xapi.php');
+define('WB_FEEDBACK_URL','http://x.weibo.com/xapi.php');
 /// 测试地址
 //define('WB_FEEDBACK_URL',	'http://x_dev.weibo.com/xapi.php');
 //----------------------------------------------------------------------
 /// 数据库名表名 content_unit
-define('T_CONTENT_UNIT',	'content_unit');
+define('T_CONTENT_UNIT','content_unit');
 /// 数据库名表名 ad
-define('T_AD',				'ad');
+define('T_AD','ad');
 /// 数据库名表名 admin
-define('T_ADMIN',			'admin');
+define('T_ADMIN','admin');
 /// 数据库名表名 admin_group
-define('T_ADMIN_GROUP',		'admin_group');
+define('T_ADMIN_GROUP','admin_group');
 /// 数据库名表名 users
-define('T_USERS',			'users');
-/// 数据库名表名 users
-define('T_USER_BAN',		'user_ban');
+define('T_USERS','users');
+/// 数据库名表名 user_ban
+define('T_USER_BAN','user_ban');
 /// 数据库名表名 user_token
 define('T_USER_TOKEN',		'user_token');
 /// 数据表,今日话题
@@ -489,7 +481,7 @@ $tpl['cache_time'] = array(
 	'pagelet_component18'			=> 300,			// 活动列表
 	'pagelet_component19'			=> 300			// 本地关注榜
 );
-									 
+
 /// xweibo模板配置
 define('PAGE_TYPE_SYSCONFIG', 	'wb_page_type');
 define('PAGE_TYPE_DEFAULT', 	'1');

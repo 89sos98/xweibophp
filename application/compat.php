@@ -1,13 +1,5 @@
 <?php
-/**************************************************
-*  Created:  2010-06-08
-*
-*  框架兼容类
-*
-*  @Xweibo (C)1996-2099 SINA Inc.
-*  @Author xionghui <xionghui1@staff.sina.com.cn>
-*
-***************************************************/
+///框架兼容类
 //JSON LIB
 if (!function_exists('json_decode')){
 	function json_decode($s, $ass = false){
@@ -70,8 +62,6 @@ if (!function_exists('file_get_contents')) {
 		}
 	}
 }
-
-
 
 if (!function_exists('http_build_query')) {
 	function http_build_query($data, $prefix='', $sep='', $key='') {

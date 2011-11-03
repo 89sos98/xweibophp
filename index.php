@@ -1,19 +1,10 @@
 <?php
-/**************************************************
-*  Created:  2010-06-08
-*
-*  入口文件
-*
-*  @Xweibo (C)1996-2099 SINA Inc.
-*  @Author xionghui <xionghui1@staff.sina.com.cn>
-*
-***************************************************/
-//---------------------------------------------------------
 //phpinfo();exit;
+///打开缓冲区,防止在header()之前输出内容出名；
 ob_start();
-/// 入口名称
+/// 入口名称（entry_script_name）
 define('ENTRY_SCRIPT_NAME','index');
-/// 当前入口的默认模块路由
+/// 当前入口的默认模块路由（r_def_mod）
 define('R_DEF_MOD', "pub");
 /// 强制的路由模式　如果你尝试使用　rewrite　功能　失败，可以通过此选项快速恢复网站正常
 //define('R_FORCE_MODE', 0);
@@ -45,9 +36,9 @@ APP::addPreDoAction('account.initSiteInfo',	 'm', false, array('pipe.t'));
 APP::addPreDoAction('account.allowedLogin',	 'm', false,array('account.logout'));
 
 if ( USER::sys('sysLoginModel') ) {
-	APP::addPreDoAction('account.gloCheckLogin', 'm', false, array('feedback.*','welcome.retry', 'pipe.t','authImage.paint', 'account.*', 'api/*', 'output.*','setting.getSkin', 'interview.*', 'live.*', 'celeb', 'celeb.*'));
+	APP::addPreDoAction('account.gloCheckLogin', 'm', false, array('feedback.*','welcome.retry', 'pipe.t','authImage.paint', 'account.*', 'api/*', 'output.*','setting.getSkin', 'interview.*', 'live.*'));
 } else {
-	APP::addPreDoAction('account.gloCheckLogin', 'm', false, array('feedback.*','custom.*','welcome.retry', 'pipe.t','authImage.paint', 'account.*', 'pub', 'pub.*', 'api/*', 'output.*','setting.getSkin', 'interview.*', 'live.*', 'celeb', 'celeb.*'));
+	APP::addPreDoAction('account.gloCheckLogin', 'm', false, array('feedback.*','custom.*','welcome.retry', 'pipe.t','authImage.paint', 'account.*', 'pub', 'pub.*', 'api/*', 'output.*','setting.getSkin', 'interview.*', 'live.*'));
 }
 
 /// 初始化应用程序
